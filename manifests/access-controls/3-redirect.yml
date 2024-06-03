@@ -1,0 +1,37 @@
+---
+kind: NgrokTrafficPolicy
+apiVersion: ngrok.k8s.ngrok.com/v1alpha1
+metadata:
+  name: variant-redirect-policy
+spec:
+  policy:
+    inbound:
+      - name: AllowWinnerVariantOnly
+        actions:
+          - type: "redirect"
+            config:
+              from: "bar"
+              to: ""
+              status_code: 302
+              headers:
+                rewrite: "true"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: game-2048
+  annotations:
+    k8s.ngrok.com/traffic-policy: variant-redirect-policy
+spec:
+  ingressClassName: ngrok
+  rules:
+    - host: 2048-demo.ngrok.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: game-2048
+                port:
+                  number: 80
