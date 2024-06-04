@@ -1,5 +1,5 @@
-# 2048-Demo
-## Ngrok
+# Ngrok
+## Traffic Policy Demo
 
 Checkout the [ngrok ingress controller](https://github.com/ngrok/kubernetes-ingress-controller).
 
