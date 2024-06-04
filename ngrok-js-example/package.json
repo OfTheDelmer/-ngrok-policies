@@ -1,0 +1,17 @@
+{
+    "name": "ngrok",
+    "version": "1.0.0",
+    "description": "Demo ngrok nodejs server",
+    "main": "server.js",
+    "scripts": {
+      "start": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@ngrok/ngrok": "^0.9.0",
+      "nodemon": "^3.1.2"
+    }
+  }
+  

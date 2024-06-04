@@ -1,6 +1,7 @@
 # 2048-Demo
 ## Ngrok
 
+Checkout the [ngrok ingress controller](https://github.com/ngrok/kubernetes-ingress-controller).
 
 ### Setup
 
@@ -91,3 +92,10 @@ EOF
 ### Original 2048
 
 Derived from [Original 2048](https://github.com/gabrielecirulli/2048)
+
+### Resources
+
+- [Introducing ngrok's Traffic Policy module](https://ngrok.com/blog-post/traffic-policy-engine#introducing-ngroks-traffic-policy-module)
+- [HTTP Traffic Policy docs](https://ngrok.com/docs/http/traffic-policy/expressions/)
+- [Secure APIs, AI and Policies](https://ngrok.com/blog-post/tutorial-jwt-api-gateway)
+- [Building Secure AI Bridges](https://ngrok.com/blog-post/ai-meets-ngrok-privacy-customer-data)
